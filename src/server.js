@@ -2,9 +2,10 @@ import express from 'express';
 import { StatusCodes } from 'http-status-codes';
 import { JoiSchemaValidation } from './middlewares/JoiMidleware.js';
 import { userSchema } from './schemas/userSchema.js';
-
+import { config } from 'dotenv';
 // instantiate express server as app
 
+config()
 const app = express();
 
 /*============================
